@@ -69,9 +69,9 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
                                             }
                                         }
 
-                                        if ($showSaleLabel == 1) {
-                                            $special_price = number_format($_item->getSpecialPrice(), 2);
-                                            $regular_price = number_format($_item->getPrice(), 2);
+                                       if ($showSaleLabel == 1) {
+    						$special_price = $_item->getSpecialPrice();
+    						$regular_price = $_item->getPrice();
                                             if (isset($special_price) && $special_price > 0) {
                                                 if ($special_price < $regular_price) {
                                                     $fromSpecialDate = $_item->getSpecialFromDate();

@@ -31,9 +31,9 @@ $showSaleLabel = $apparelHelper->getConfigValue('apparelsettings/product_setting
         }
     }
 
-    if ($showSaleLabel == 1) {
-        $special_price = number_format($_product->getSpecialPrice(), 2);
-        $regular_price = number_format($_product->getPrice(), 2);
+   if ($showSaleLabel == 1) {
+    $special_price = $_product->getSpecialPrice();
+    $regular_price = $_product->getPrice();
         if (isset($special_price) && $special_price > 0) {
             if ($special_price < $regular_price) {
                 $fromSpecialDate = $_product->getSpecialFromDate();
